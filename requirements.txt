@@ -1,0 +1,4 @@
+kfp==0.5.1
+kubernetes==11.0.0
+pandas==1.0.5
+scikit-learn==0.23.1

@@ -20,13 +20,9 @@ def deploy(regr, mse):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
+    with open("/mlpipeline-metrics.json", "w") as f:
+        metrics = json.load(f)
 
-    parser.add_argument("--metrics", help="JSON containing metrics")
-
-    args = parser.parse_args()
-
-    metrics = json.loads(args.metrics)
     mse = metrics["metrics"][0]["numberValue"]
 
     regr = load("trained_model.joblib")

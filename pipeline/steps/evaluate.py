@@ -20,7 +20,6 @@ if __name__ == "__main__":
     print(f"MSE: {mse}")
 
     metrics = {"metrics": [{"name": "mse", "numberValue": mse, "format": "RAW",},]}
-    print(metrics)
 
     with open("/mlpipeline-metrics.json", "w") as f:
         json.dump(metrics, f)
